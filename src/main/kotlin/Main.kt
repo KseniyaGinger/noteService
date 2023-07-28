@@ -14,6 +14,7 @@ data class Comments(
 
 class NotFoundException(message: String) : RuntimeException(message)
 
+
 fun main(args: Array<String>) {
 
     val note1 = NoteService.add(Notes("title1", "text1", 123, false))
@@ -26,7 +27,7 @@ fun main(args: Array<String>) {
     println(NoteService.get())
 
     println("create comments 1,2")
-    println(NoteService.getComment(2, Comments(8, 5, "j", false)))
+    println(NoteService.getComment(1)
 
     println("delete note1")
     println(NoteService.deleteNote(123))
@@ -116,9 +117,9 @@ object NoteService {
         throw NotFoundException("error")
     }
 
-    fun getComment(commentId: Int, comment: Comments): MutableList<Comments> {
+   fun getComment(noteId: Int): MutableList<Comments> {
         for (comment in comments) {
-            if (!comment.isDelete && comment.noteId == commentId)
+            if (!comment.isDelete && comment.noteId == noteId)
                 return comments
         }
         throw NotFoundException("deleted comment")
