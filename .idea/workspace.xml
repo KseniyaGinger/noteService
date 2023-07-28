@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d761cd45-95d2-4e3b-b265-f00686e6346e" name="Changes" comment="1">
+    <list default="true" id="d761cd45-95d2-4e3b-b265-f00686e6346e" name="Changes" comment="отредактировала функцию get comment">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Main.kt" afterDir="false" />
     </list>
@@ -220,11 +220,20 @@
       <option name="project" value="LOCAL" />
       <updated>1690555374725</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="отредактировала функцию get comment">
+      <option name="closed" value="true" />
+      <created>1690556305902</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1690556305902</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="1" />
-    <option name="LAST_COMMIT_MESSAGE" value="1" />
+    <MESSAGE value="отредактировала функцию get comment" />
+    <option name="LAST_COMMIT_MESSAGE" value="отредактировала функцию get comment" />
   </component>
 </project>

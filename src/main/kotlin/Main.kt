@@ -23,11 +23,12 @@ fun main(args: Array<String>) {
     val comment1 = NoteService.createComment(Comments(789, 123, "message1", false))
     val comment2 = NoteService.createComment(Comments(234, 456, "message2", false))
 
+
     println("add notes 1,2")
-    println(NoteService.get())
+    println(NoteService.add(note1))
 
     println("create comments 1,2")
-    println(NoteService.getComment(1)
+    println(NoteService.createComment(comment1))
 
     println("delete note1")
     println(NoteService.deleteNote(123))
@@ -42,7 +43,7 @@ fun main(args: Array<String>) {
     println(NoteService.editComment(234, comment2))
 
     println("get comments")
-    println(NoteService.get())
+    println (NoteService.get())
 }
 
 
