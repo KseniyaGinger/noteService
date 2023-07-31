@@ -88,7 +88,7 @@ object NoteService {
     }
 
     fun edit(noteId: Int, note: Notes): Boolean {
-        for ((index, note) in notes.withIndex()) {
+        for ((index, note1) in notes.withIndex()) {
             if (note.noteId == noteId && !note.isDelete)
                 notes[index] == note.copy(noteId = notes[index].noteId)
             return true
@@ -97,7 +97,7 @@ object NoteService {
     }
 
     fun editComment(commentId: Int, comment: Comments): Boolean {
-        for ((index, comment) in comments.withIndex()) {
+        for ((index, comment1) in comments.withIndex()) {
             if (comment.commentId == commentId && !comment.isDelete)
                 comments[index] == comment.copy(commentId = comments[index].commentId)
             return true
