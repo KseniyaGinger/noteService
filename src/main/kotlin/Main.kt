@@ -89,18 +89,20 @@ object NoteService {
 
     fun edit(noteId: Int, note: Notes): Boolean {
         for ((index, note1) in notes.withIndex()) {
-            if (note.noteId == noteId && !note.isDelete)
-                notes[index] == note.copy(noteId = notes[index].noteId)
-            return true
+            if (note1.noteId == noteId && !note1.isDelete) {
+                notes[index] = note.copy(noteId = notes[index].noteId)
+                return true
+            }
         }
         return false
     }
 
     fun editComment(commentId: Int, comment: Comments): Boolean {
         for ((index, comment1) in comments.withIndex()) {
-            if (comment.commentId == commentId && !comment.isDelete)
-                comments[index] == comment.copy(commentId = comments[index].commentId)
-            return true
+            if (comment1.commentId == commentId && !comment1.isDelete) {
+                comments[index] = comment.copy(commentId = comments[index].commentId)
+                return true
+            }
         }
         return false
     }
@@ -110,7 +112,7 @@ object NoteService {
     }
 
 
-    fun getById(noteId: Int, note: Notes): Notes {
+    fun getById(noteId: Int): Notes {
         for (note in notes) {
             if (note.noteId == noteId && !note.isDelete)
                 return note

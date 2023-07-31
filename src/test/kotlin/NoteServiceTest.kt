@@ -89,14 +89,14 @@ class NoteServiceTest {
     @Test
     fun getById() {
         val noteId = NoteService.add(Notes("d", "s", 8, false))
-        val result = NoteService.getById(8, Notes("d", "s", 8, false))
+        val result = NoteService.getById(8)
         assert(true)
     }
 
     @Test
     fun getByIdFalse() {
         val result = try {
-            NoteService.getById(8, Notes("d", "s", 8, false ))
+            NoteService.getById(8)
             true
         } catch (e: NotFoundException) {
             false
@@ -107,7 +107,7 @@ class NoteServiceTest {
     @Test
     fun getComment() {
         val result = try {
-            NoteService.getComment(8, Comments(8,8,"s", false))
+            NoteService.getComment(8)
             true
         } catch (e: NotFoundException) {
             false
